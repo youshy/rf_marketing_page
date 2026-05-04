@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <title>RF Paving - Paving Slabs, Tiles, Cobbles & Landscaping Suppliers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://rflandscapeproducts.co.uk/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://rflandscapeproducts.co.uk/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://rflandscapeproducts.co.uk/favicon-16x16.png">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Figtree', sans-serif;
+      color: #282828;
+      background: #fff;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.2s ease, background-color 0.2s ease;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+      width: 100%;
+    }
+
+    /* ========================================
+       TOP NAV BAR
+    ======================================== */
+    .top-nav {
+      background: #EDEDED;
+      padding: 8px 0;
+    }
+
+    .top-nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .top-nav-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 14px;
+      font-weight: 300;
+      color: #000;
+    }
+
+    .top-nav-meta a {
+      color: #000;
+    }
+
+    .top-nav-meta a:hover {
+      opacity: 0.7;
+    }
+
+    .top-nav-separator {
+      color: #000;
+    }
+
+    /* ========================================
+       MAIN HEADER
+    ======================================== */
+    .main-header {
+      background: #fff;
+      padding: 12px 0;
+    }
+
+    .main-header .container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo-container {
+      flex-shrink: 0;
+    }
+
+    .logo-container a {
+      display: block;
+      height: 44px;
+    }
+
+    .logo-container img {
+      height: 100%;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .search-bar {
+      flex: 1;
+      margin-right: 50px;
+    }
+
+    .search-bar form {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .search-bar input[type="search"] {
+      width: 100%;
+      height: 42px;
+      padding: 0 50px 0 16px;
+      border: 1px solid #d3d3d3;
+      border-radius: 4px;
+      font-family: 'Figtree', sans-serif;
+      font-size: 15px;
+      font-weight: 300;
+      color: #282828;
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+
+    .search-bar input[type="search"]::placeholder {
+      color: #9d9c9c;
+      font-family: 'Figtree', sans-serif;
+    }
+
+    .search-bar input[type="search"]:focus {
+      border-color: #282828;
+    }
+
+    .search-bar button {
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .search-bar button svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .account-links {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-shrink: 0;
+    }
+
+    .trade-link {
+      background: #282828;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 14px;
+      line-height: 18px;
+      padding: 12px 18px;
+      font-weight: 500;
+      transition: background-color 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .trade-link:hover {
+      background: #000;
+      color: #fff;
+    }
+
+    .header-icon-btn {
+      width: 42px;
+      height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid transparent;
+      transition: border-color 0.2s ease;
+    }
+
+    .header-icon-btn:hover {
+      border-color: #282828;
+    }
+
+    .header-icon-btn svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .basket-btn {
+      position: relative;
+    }
+
+    .basket-count {
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      background: #282828;
+      color: #fff;
+      font-size: 10px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+    }
+
+    /* ========================================
+       NAVIGATION BAR
+    ======================================== */
+    .nav-bar {
+      background: #EDEDED;
+    }
+
+    .nav-bar .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-primary {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-primary li {
+      position: relative;
+    }
+
+    .nav-primary li a {
+      display: block;
+      padding: 22px 16px;
+      font-size: 15px;
+      font-weight: 500;
+      color: #282828;
+      white-space: nowrap;
+      transition: opacity 0.2s ease;
+    }
+
+    .nav-primary li a:hover {
+      opacity: 0.7;
+    }
+
+    .nav-secondary {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-secondary li a {
+      display: block;
+      padding: 22px 16px;
+      font-size: 14px;
+      font-weight: 400;
+      color: #282828;
+      white-space: nowrap;
+    }
+
+    .nav-secondary li a:hover {
+      opacity: 0.7;
+    }
+
+    /* ========================================
+       USP BAR
+    ======================================== */
+    .usp-bar {
+      background: #fff;
+      padding: 10px 0;
+      border-bottom: 1px solid #EDEDED;
+    }
+
+    .usp-bar .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .usp-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .usp-item .usp-icon {
+      height: 16px;
+      width: auto;
+      flex-shrink: 0;
+    }
+
+    .usp-item span {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 3.5px;
+      text-transform: uppercase;
+      color: #282828;
+      white-space: nowrap;
+    }
+
+    /* ========================================
+       IFRAME CONTENT AREA
+    ======================================== */
+    .content-frame {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .content-frame iframe {
+      flex: 1;
+      width: 100%;
+      min-height: 900px;
+      border: none;
+    }
+
+    /* ========================================
+       NEWSLETTER SECTION
+    ======================================== */
+    .newsletter {
+      background: #EDEDED;
+      padding: 42px 0;
+    }
+
+    .newsletter .container {
+      text-align: center;
+    }
+
+    .newsletter-title {
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #282828;
+      margin-bottom: 22px;
+    }
+
+    .newsletter-form {
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .newsletter-form input[type="email"] {
+      flex: 1;
+      height: 50px;
+      padding: 12px 14px;
+      border: 1px solid #d3d3d3;
+      border-right: none;
+      font-family: 'Figtree', sans-serif;
+      font-size: 15px;
+      outline: none;
+    }
+
+    .newsletter-form input[type="email"]::placeholder {
+      color: #9d9c9c;
+    }
+
+    .newsletter-form button {
+      background: #EDD7B7;
+      color: #282828;
+      border: none;
+      padding: 16px 24px;
+      font-family: 'Figtree', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background-color 0.2s ease, color 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .newsletter-form button:hover {
+      background: #000;
+      color: #fff;
+    }
+
+    /* ========================================
+       FOOTER
+    ======================================== */
+    .footer {
+      background: #EDEDED;
+      padding: 108px 0 65px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 4fr 1fr 7fr;
+      gap: 0;
+    }
+
+    .footer-section-title {
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0;
+      color: #282828;
+      line-height: 24px;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .footer-description {
+      font-size: 14px;
+      line-height: 22px;
+      color: #4B4B4B;
+      margin-bottom: 20px;
+    }
+
+    .footer-contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding-left: 33px;
+      position: relative;
+      margin-bottom: 12px;
+      font-size: 14px;
+      line-height: 22px;
+      color: #282828;
+    }
+
+    .footer-contact-item .contact-icon {
+      position: absolute;
+      left: 0;
+      top: 1px;
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+    }
+
+    .footer-contact-item a {
+      color: #282828;
+    }
+
+    .footer-contact-item a:hover {
+      opacity: 0.7;
+    }
+
+    .footer-contact-item.address a {
+      display: block;
+    }
+
+    .footer-menus {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .footer-menu-col ul li {
+      margin: 0;
+      line-height: 40px;
+    }
+
+    .footer-menu-col ul li a {
+      font-size: 14px;
+      color: #282828;
+    }
+
+    .footer-menu-col ul li a:hover {
+      opacity: 0.7;
+    }
+
+    /* ========================================
+       FOOTER CENTER BAR
+    ======================================== */
+    .footer-center {
+      background: #EDEDED;
+      padding: 10px 0;
+    }
+
+    .footer-center .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .payment-logos {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      height: 30px;
+    }
+
+    .payment-logos img {
+      height: 100%;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .footer-right-group {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .accred-logos {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      height: 50px;
+    }
+
+    .accred-logos img {
+      height: 100%;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .social-media {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .social-media li a {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #282828;
+      color: #fff;
+      font-size: 14px;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .social-media li a:hover {
+      transform: scale(1.1);
+    }
+
+    .social-media li a.pinterest:hover { background: #F0002A; }
+    .social-media li a.youtube:hover { background: red; }
+    .social-media li a.spotify:hover { background: #1DB954; }
+    .social-media li a.facebook:hover { background: #1877F2; }
+    .social-media li a.linkedin:hover { background: #0A66C2; }
+    .social-media li a.instagram:hover { background: #d6249f; }
+    .social-media li a.tiktok:hover { background: #000; }
+
+    /* ========================================
+       FOOTER BOTTOM
+    ======================================== */
+    .footer-bottom {
+      background: #EDEDED;
+      padding: 44px 0;
+      border-top: 1px solid #d3d3d3;
+    }
+
+    .footer-bottom .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer-bottom p {
+      font-size: 10px;
+      color: #4B4B4B;
+    }
+
+    .footer-bottom a {
+      color: #4B4B4B;
+    }
+
+    .footer-bottom a:hover {
+      color: #282828;
+    }
+
+    /* ========================================
+       MOBILE MENU TOGGLE (hidden on desktop)
+    ======================================== */
+    .mobile-menu-toggle {
+      display: none;
+    }
+
+    /* ========================================
+       RESPONSIVE
+    ======================================== */
+    @media (max-width: 1024px) {
+      .nav-bar {
+        display: none;
+      }
+
+      .usp-bar {
+        display: none;
+      }
+
+      .search-bar {
+        margin-right: 20px;
+      }
+
+      .trade-link {
+        display: none;
+      }
+
+      .mobile-menu-toggle {
+        display: flex;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .footer-grid > div:nth-child(2) {
+        display: none;
+      }
+
+      .footer-menus {
+        flex-wrap: wrap;
+        gap: 30px;
+      }
+
+      .footer-menu-col {
+        min-width: 140px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .main-header .container {
+        gap: 12px;
+      }
+
+      .search-bar {
+        margin-right: 0;
+      }
+
+      .logo-container a {
+        height: 36px;
+      }
+
+      .account-links {
+        gap: 8px;
+      }
+
+      .top-nav-meta {
+        font-size: 13px;
+      }
+
+      .footer {
+        padding: 60px 0 40px;
+      }
+
+      .footer-menus {
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .footer-center .container {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .footer-right-group {
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .footer-bottom .container {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+      }
+
+      .newsletter-form {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .newsletter-form input[type="email"] {
+        border-right: 1px solid #d3d3d3;
+      }
+
+      .content-frame iframe {
+        min-height: 700px;
+      }
+
+      .nav-primary li a {
+        padding: 16px 12px;
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header-icon-btn:not(.basket-btn):not(.mobile-menu-toggle) {
+        display: none;
+      }
+
+      .payment-logos {
+        height: 22px;
+        gap: 6px;
+      }
+
+      .accred-logos {
+        height: 36px;
+      }
+    }
+  </style>
+  <script>var PIPEWRENCH_API = 'https://api.pipewrench.co.uk/api/v1/partner/link/d3f2dd1c-f4a9-4788-9ca5-5d5d14a7f9f1';</script>
+</head>
+<body>
+
+  <!-- ========================================
+       HEADER
+  ======================================== -->
+
+  <!-- Top Navigation Bar -->
+  <div class="top-nav">
+    <div class="container">
+      <div class="top-nav-meta">
+        <span>Call: <a href="tel:01977782240">01977 782 240</a></span>
+        <span class="top-nav-separator">|</span>
+        <a href="https://rflandscapeproducts.co.uk/contact-us/">Contact Us</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Header -->
+  <header class="main-header">
+    <div class="container">
+      <div class="logo-container">
+        <a href="https://rflandscapeproducts.co.uk">
+          <img src="https://rflandscapeproducts.co.uk/wp-content/uploads/2026/02/RF-Paving-Logo-Secondary-e1771003409814-300x68.png" alt="RF Paving">
+        </a>
+      </div>
+
+      <div class="search-bar">
+        <form action="https://rflandscapeproducts.co.uk/" method="get">
+          <input type="search" name="s" placeholder="Search for products..." autocomplete="off">
+          <input type="hidden" name="post_type" value="product">
+          <button type="submit" aria-label="Search">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19.5 19.5L15.875 15.875M17.8333 11.1667C17.8333 14.8486 14.8486 17.8333 11.1667 17.8333C7.48477 17.8333 4.5 14.8486 4.5 11.1667C4.5 7.48477 7.48477 4.5 11.1667 4.5C14.8486 4.5 17.8333 7.48477 17.8333 11.1667Z" stroke="#282828" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </form>
+      </div>
+
+      <div class="account-links">
+        <a href="https://rflandscapeproducts.co.uk/trade-accounts/" class="trade-link">Open a trade account</a>
+        <a href="https://rflandscapeproducts.co.uk/my-account/" class="header-icon-btn" aria-label="My Account">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z" stroke="#282828" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="https://rflandscapeproducts.co.uk/basket/" class="header-icon-btn basket-btn" aria-label="Basket">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 2L3 6V20C3 20.5304 3.21071 21.0391 3.58579 21.4142C3.96086 21.7893 4.46957 22 5 22H19C19.5304 22 20.0391 21.7893 20.4142 21.4142C20.7893 21.0391 21 20.5304 21 20V6L18 2H6Z" stroke="#282828" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M3 6H21" stroke="#282828" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16 10C16 11.0609 15.5786 12.0783 14.8284 12.8284C14.0783 13.5786 13.0609 14 12 14C10.9391 14 9.92172 13.5786 9.17157 12.8284C8.42143 12.0783 8 11.0609 8 10" stroke="#282828" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="basket-count">0</span>
+        </a>
+        <a href="#" class="header-icon-btn mobile-menu-toggle" id="openMobileMenu" aria-label="Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 12H21M3 6H21M3 18H21" stroke="#282828" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="nav-bar">
+    <div class="container">
+      <ul class="nav-primary">
+        <li><a href="https://rflandscapeproducts.co.uk/product-category/porcelain-paving/">Porcelain Paving</a></li>
+        <li><a href="https://rflandscapeproducts.co.uk/product-category/all-natural-stone-paving/">Stone Paving</a></li>
+        <li><a href="https://rflandscapeproducts.co.uk/product-category/all-cladding-and-tiles/">Cladding &amp; Tiles</a></li>
+        <li><a href="https://rflandscapeproducts.co.uk/product-category/outdoor-kitchens/">Outdoor Kitchens</a></li>
+        <li><a href="https://rflandscapeproducts.co.uk/product-category/pedestals/">Pedestals</a></li>
+        <li><a href="https://rflandscapeproducts.co.uk/product-category/drainage/">Drainage</a></li>
+        <li><a href="https://rflandscapeproducts.co.uk/product-category/landscaping/">Landscaping</a></li>
+        <li><a href="https://rflandscapeproducts.co.uk/product-category/steps-and-copings/">Steps &amp; Copings</a></li>
+      </ul>
+      <ul class="nav-secondary">
+        <li><a href="https://rflandscapeproducts.co.uk/commercial-paving/">Commercial</a></li>
+        <li><a href="https://rflandscapeproducts.co.uk/book-a-consultation/">Consultation</a></li>
+        <li><a href="https://rflandscapeproducts.co.uk/deliveries/">Deliveries</a></li>
+        <li><a href="https://rflandscapeproducts.co.uk/contact-us/">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- USP Trust Badge Bar -->
+  <div class="usp-bar">
+    <div class="container">
+      <div class="usp-item">
+        <img src="https://rflandscapeproducts.co.uk/wp-content/uploads/2026/02/usp-icon-1.svg" alt="Family owned" class="usp-icon">
+        <span>Family owned since 1990</span>
+      </div>
+      <div class="usp-item">
+        <img src="https://rflandscapeproducts.co.uk/wp-content/uploads/2023/11/header-cta-2.svg" alt="Showroom" class="usp-icon">
+        <span>Onsite Showroom</span>
+      </div>
+      <div class="usp-item">
+        <img src="https://rflandscapeproducts.co.uk/wp-content/uploads/2024/02/172528_price_tag_pound_icon.svg" alt="Price Match" class="usp-icon">
+        <span>Price Match Guarantee</span>
+      </div>
+      <div class="usp-item">
+        <img src="https://rflandscapeproducts.co.uk/wp-content/uploads/2023/11/header-cta-3.svg" alt="Account Manager" class="usp-icon">
+        <span>Dedicated Account Manager</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================
+       MAIN CONTENT (IFRAME)
+  ======================================== -->
+  <main class="content-frame">
+    <iframe id="pipewrench-frame" src="about:blank" title="Pipewrench" width="100%" height="800" frameborder="0" sandbox="allow-scripts allow-forms allow-same-origin allow-popups allow-top-navigation"></iframe>
+    <script>
+      (async function() {
+        try {
+          const res = await fetch(PIPEWRENCH_API);
+          const data = await res.json();
+          if (data.invite_url) {
+            document.getElementById('pipewrench-frame').src = data.invite_url;
+          }
+        } catch (e) {
+          console.error('Failed to load partner link:', e);
+        }
+      })();
+    </script>
+  </main>
+
+  <!-- ========================================
+       FOOTER
+  ======================================== -->
+
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <div class="container">
+      <h3 class="newsletter-title">Sign up to our newsletter!</h3>
+      <form class="newsletter-form" action="#" method="post">
+        <input type="email" name="email" placeholder="Enter your email address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Main Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Left Column: Contact Info -->
+        <div>
+          <span class="footer-section-title">Find Us</span>
+          <p class="footer-description">The RF Paving range has grown and developed into one of the UK's leading stone brands.</p>
+
+          <div class="footer-contact-item">
+            <svg class="contact-icon" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.9995 12.7278V15.287C17.0004 15.5245 16.9517 15.7597 16.8563 15.9774C16.7609 16.1951 16.6211 16.3905 16.4457 16.5511C16.2702 16.7117 16.0632 16.834 15.8376 16.9101C15.6121 16.9862 15.3732 17.0145 15.1361 16.9931C12.5059 16.7078 9.97937 15.8109 7.75957 14.3742C5.69433 13.0644 3.94337 11.3169 2.63104 9.25581C1.18648 7.03034 0.287505 4.49657 0.0069378 1.85976C-0.0144221 1.62386 0.0136689 1.3861 0.089422 1.16163C0.165175 0.937161 0.286931 0.730892 0.446937 0.555956C0.606943 0.38102 0.801693 0.241251 1.01879 0.145548C1.23589 0.0498457 1.47057 0.000305764 1.7079 8.27063e-05H4.27217C4.68699 -0.0039919 5.08914 0.142611 5.40366 0.412566C5.71818 0.682521 5.92362 1.05741 5.98168 1.46735C6.08991 2.28635 6.29063 3.09049 6.58001 3.86445C6.69501 4.16978 6.7199 4.50162 6.65173 4.82063C6.58355 5.13965 6.42518 5.43248 6.19537 5.66441L5.10983 6.7478C6.32662 8.88348 8.09844 10.6518 10.2384 11.8662L11.3239 10.7828C11.5563 10.5534 11.8497 10.3954 12.1694 10.3273C12.489 10.2593 12.8215 10.2841 13.1274 10.3989C13.9029 10.6877 14.7087 10.888 15.5293 10.9961C15.9445 11.0545 16.3237 11.2632 16.5948 11.5825C16.8658 11.9018 17.0099 12.3094 16.9995 12.7278Z" fill="#282828"/>
+            </svg>
+            <a href="tel:01977782240">01977 782 240</a>
+          </div>
+
+          <div class="footer-contact-item">
+            <svg class="contact-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3.33317 16.6668C2.87484 16.6668 2.479 16.5071 2.14567 16.1877C1.82623 15.8543 1.6665 15.4585 1.6665 15.0002V5.00016C1.6665 4.54183 1.82623 4.15294 2.14567 3.8335C2.479 3.50016 2.87484 3.3335 3.33317 3.3335H16.6665C17.1248 3.3335 17.5137 3.50016 17.8332 3.8335C18.1665 4.15294 18.3332 4.54183 18.3332 5.00016V15.0002C18.3332 15.4585 18.1665 15.8543 17.8332 16.1877C17.5137 16.5071 17.1248 16.6668 16.6665 16.6668H3.33317ZM9.99984 10.8335L16.6665 6.66683V5.00016L9.99984 9.16683L3.33317 5.00016V6.66683L9.99984 10.8335Z" fill="#282828"/>
+            </svg>
+            <a href="mailto:sales@rflandscapeproducts.co.uk">sales@rflandscapeproducts.co.uk</a>
+          </div>
+
+          <div class="footer-contact-item address">
+            <svg class="contact-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" fill="#282828"/>
+              <path d="M9 22V12H15V22" fill="#282828"/>
+              <path d="M9 22V12H15V22M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="#EDEDED" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <a href="https://www.google.co.uk/maps/dir/''/rf+landscape+paving/" target="_blank">
+              RF Paving, A19 Doncaster Road, Whitley, East Yorkshire, <strong>DN14 0JW</strong>
+            </a>
+          </div>
+        </div>
+
+        <!-- Spacer Column -->
+        <div></div>
+
+        <!-- Right Column: Menu Columns -->
+        <div>
+          <div class="footer-menus">
+            <div class="footer-menu-col">
+              <span class="footer-section-title">Our Products</span>
+              <ul>
+                <li><a href="https://rflandscapeproducts.co.uk/product-category/all-natural-stone-paving/">Stone Paving</a></li>
+                <li><a href="https://rflandscapeproducts.co.uk/product-category/porcelain-paving/all-porcelain-paving/in-and-out-collection/">Indoor Outdoor Tiles</a></li>
+                <li><a href="https://rflandscapeproducts.co.uk/product-category/porcelain-paving/">Porcelain Paving</a></li>
+                <li><a href="https://rflandscapeproducts.co.uk/product-category/pedestals/">Pedestals</a></li>
+                <li><a href="https://rflandscapeproducts.co.uk/product-category/steps-and-copings/">Steps &amp; Copings</a></li>
+                <li><a href="https://rflandscapeproducts.co.uk/product-category/cobbles-and-edging/">Cobbles &amp; Edging</a></li>
+                <li><a href="https://rflandscapeproducts.co.uk/product-category/all-cladding-and-tiles/">Cladding &amp; Tiles</a></li>
+                <li><a href="https://rflandscapeproducts.co.uk/product-category/iniwood-decking/">Decking</a></li>
+                <li><a href="https://rflandscapeproducts.co.uk/product-category/landscaping/">Landscaping</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-menu-col">
+              <span class="footer-section-title">Useful Links</span>
+              <ul>
+                <li><a href="https://rflandscapeproducts.co.uk/about-us/">About Us</a></li>
+                <li><a href="https://rflandscapeproducts.co.uk/blog/">Blog</a></li>
+                <li><a href="https://rflandscapeproducts.co.uk/case-studies/">Case Studies</a></li>
+                <li><a href="https://rflandscapeproducts.co.uk/inspiration/">Inspiration</a></li>
+                <li><a href="https://rflandscapeproducts.co.uk/faq/">FAQs</a></li>
+                <li><a href="https://rflandscapeproducts.co.uk/become-a-stockist/">Become a Paving Stockist</a></li>
+                <li><a href="https://rflandscapeproducts.co.uk/trade-accounts/">Open A Trade Account</a></li>
+                <li><a href="https://rflandscapeproducts.co.uk/garden-paving-ideas-landscape-and-garden-design-inspiration/">Garden Paving Ideas</a></li>
+                <li><a href="https://rflandscapeproducts.co.uk/contact-us/">Contact Us</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-menu-col">
+              <span class="footer-section-title">Policies</span>
+              <ul>
+                <li><a href="https://rflandscapeproducts.co.uk/deliveries/">Deliveries</a></li>
+                <li><a href="https://rflandscapeproducts.co.uk/terms-conditions/">Terms &amp; Conditions</a></li>
+                <li><a href="https://rflandscapeproducts.co.uk/returns-refunds/">Returns &amp; Refunds</a></li>
+                <li><a href="https://rflandscapeproducts.co.uk/privacy-policy/">Privacy Policy</a></li>
+                <li><a href="https://rflandscapeproducts.co.uk/cookie-policy/">Cookie Policy</a></li>
+                <li><a href="#">Cookie Settings</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Footer Center: Payment & Social -->
+  <div class="footer-center">
+    <div class="container">
+      <div class="payment-logos">
+        <img src="https://rflandscapeproducts.co.uk/wp-content/uploads/2024/02/PayPal.svg" alt="PayPal">
+        <img src="https://rflandscapeproducts.co.uk/wp-content/uploads/2024/02/american-express-logo-300x81.png" alt="American Express">
+        <img src="https://rflandscapeproducts.co.uk/wp-content/uploads/2024/02/Mastercard_2019_logo.svg" alt="Mastercard">
+        <img src="https://rflandscapeproducts.co.uk/wp-content/uploads/2024/02/visa.svg" alt="Visa">
+        <img src="https://rflandscapeproducts.co.uk/wp-content/uploads/2026/02/png-transparent-klarna-pink-button-tech-companies-e1771003278200-300x150.webp" alt="Klarna">
+      </div>
+
+      <div class="footer-right-group">
+        <div class="accred-logos">
+          <img src="https://rflandscapeproducts.co.uk/wp-content/uploads/2026/02/698e35c73b926_APL-Logo-300x187.png" alt="APL Member">
+          <img src="https://rflandscapeproducts.co.uk/wp-content/uploads/2026/02/698e35c732afc_HTA-Logo-300x230.png" alt="HTA Member">
+        </div>
+
+        <ul class="social-media">
+          <li><a href="https://www.instagram.com/rfpaving/" class="instagram" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="https://www.facebook.com/rfpaving/" class="facebook" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+          <li><a href="https://uk.pinterest.com/rfpaving/" class="pinterest" target="_blank" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a></li>
+          <li><a href="https://www.tiktok.com/@rfpaving" class="tiktok" target="_blank" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a></li>
+          <li><a href="https://uk.linkedin.com/company/rf-landscape-products-ltd" class="linkedin" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+          <li><a href="https://www.youtube.com/@rfpaving" class="youtube" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></li>
+          <li><a href="https://www.youtube.com/@pavingthewaypod" class="spotify" target="_blank" aria-label="Podcast"><i class="fa-solid fa-podcast"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <div class="container">
+      <p>Copyright RF Paving <span>|</span> All Rights Reserved <span>|</span> <a href="https://rflandscapeproducts.co.uk/sitemap_index.xml" target="_blank">Sitemap</a></p>
+      <p><a href="https://identifydigital.co.uk/" target="_blank">Web Design &amp; Development by Identify</a></p>
+    </div>
+  </div>
+
+</body>
+</html>
